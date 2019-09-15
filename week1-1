@@ -3,7 +3,108 @@ Design a Traffic Controller System for a Junction
 System can 
 1. change the color of the light(red, green, yellow)
 2. help the passenger cross the road
-3.
+3. send road live info to the control center
 
 ----------------------------------------------------------------------
-Class: 
+Class: driver
+Data: carInfo, Name, Lisence, driveSpeed
+Behaviour: getLightInfo(){
+    List<color> colorOfLight
+    if(color = red)
+    return true;
+    driver.driveStop;
+      else if(color = green)
+      return true;
+      driver.driveAcross;
+          else if(color = yellow)
+          return true;
+          driver.driveSpeedUp;
+              else return false;
+}
+
+Behaviour: getRoadInfo(){
+    driver.driveInfo = controllerSystem.RoadInfo(time, condition);
+}
+
+----------------------------------------------------------------------
+Class: light
+Data: color, timeToChange
+Behaviour: changeColor(){
+    List<colorType> colorType;
+    light.color = controllerSystem.colorInfo();
+}
+
+----------------------------------------------------------------------
+Class: roadCamera
+Data: video, photo
+Behaviour: countCarNumber(){
+    int timer
+    for(timer = 0, timer < 60, timer++){
+    
+    if(car.passthrough) 
+    carNumber = carNumber++;
+    return carNumber = carNumber;
+    
+    if(timer = 59)
+    return timer = 0;
+    return timer;
+    }
+}
+
+----------------------------------------------------------------------
+Class: passenger
+Data: number, derection
+Behaviour: crossRoad(){
+    List<color> color;
+    if(color = red)
+    return true;
+    passenger.stopPass;
+      else if(color = white)
+      return true;
+      passenger.passAcross;
+          else return false;
+}
+
+----------------------------------------------------------------------
+Class: controllerSystem
+Data: status, timer
+Behaviour: RoadInfo(time, condition){
+    Condition condition;
+    int carNumber = roadCamera.countCarNumber();
+    if(carNumber < 100)
+    return condition = good;
+        else if(carNumber < 200)
+        return condition = notBad;
+            else return condition = bad;
+    system.out.print("this road conditon is", condition);
+}
+
+
+Behaviour: colorInfo(){
+    colroR red;
+    colorY yellow;
+    colorG green;
+    
+    int i;
+    for(i = 0, i < 65, i++){
+        if(i < 30)
+        return colorG = true, colorY = false, colorR = false;
+            else if(i < 35)
+            return colorY = true, colorR = false, colorG = false;
+                else return colorR = true, colorY = false, colorG = false;
+         
+         if(i = 64)
+         return i = 0;
+         return null;
+    }
+}
+
+
+
+
+
+
+
+
+
+
