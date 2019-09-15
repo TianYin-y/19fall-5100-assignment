@@ -1,1 +1,71 @@
 Design a Parking lot
+
+users can
+1.park a car
+2.make a payment
+3.find their car
+
+--------------------------------------------------------------------------------------
+Class: User
+Data: phoneNumeber, creditCardDetail, checkInHour, checkOutHour
+Behaviour: parkCar(){
+    List<parkingSpace> spaceNumber;
+    if(parkingLot.status == 1)
+    return true;
+    system.out.print("you can park in", spaceNumber);
+    else return false;
+}
+
+Behviour: makePayment(){
+    int hour = checkOutHour - checkInHour;
+    int Price = parkingLot.Data(hourPrice) * Hour;
+    if(confirm) return true
+        creditCard.pay();
+        system.out.print("keep your receipt");
+        else return false;
+}
+
+Behaviour: findCar(carInfo){
+    string carInfo = parkingLot.findCar();
+    int carLocationg = parkingLot.spaceNumber();
+    system.out.print("your car is in", carLocationg);
+}
+
+---------------------------------------------------------------------------------------
+Class: Car
+Data: carNumber, Make, Color, Model
+
+---------------------------------------------------------------------------------------
+Class: creditCard
+Data: cardNumber, expireDate, cvvNumber, onwerName
+Behaviour: cardAvailable(){
+	  Date currentDate = new Date();
+    if(currentDate.compareTo(expireDate) < 1)
+    return true;
+    return false;
+    system.out.print("your card is expired");
+}
+
+---------------------------------------------------------------------------------------
+Class: parkingLot
+Data: Name, hourPrice, Location, spaceNumber, status, NumberOfCar
+Behaviour:findCar(){
+    List<car> car;
+    for ( i = 0; i < NumberOfCars(total); i++) {
+      car(i).carNumber = user.enterCarNumber;
+      if(car(i).carnumber = car.carData(carNumber))
+      return true;
+      return false; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
