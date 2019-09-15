@@ -1,0 +1,82 @@
+Design a vending Machine (will accept coins of different denominations and vends out candies, soda etc)
+
+User can:
+1.choose a product
+2.make a payment
+3.contect help service
+
+------------------------------------------------------------------------------------------------------------
+Class: User
+Data: wantedProduct
+Behaviour: chooseProduct(){
+    int NumberOfProduct;
+    if(NumberOfProduct,compareTo(product.number) == 1)
+        return true;
+        system.out.print("The price is", product.productData(price));
+      else return false;
+      system.out.print("input the number again");
+}
+
+Behaviour: makePurchase(){
+    purchaseDetails = Machine.purchase(confirmPurchase);
+}
+
+Behaviour: getChange(){
+    changeDetails = Machine.giveOutChange();
+}
+
+Behaviour: callforHelp(){
+    int number = helpNumber;
+    if(number.compareTo(machine.machineData(helpNumber)) == 1)
+    return true;
+    system.out.print("enter your phone number, we will contect you soon");
+    else return false;
+}
+
+-----------------------------------------------------------------------------------------------------------
+Class: Product
+Data: number, sort, price
+
+-----------------------------------------------------------------------------------------------------------
+Class: machine
+Data: helpNumber, numberButton, confirmButton, cancelButton
+Behaviour: recognizeDenominations(){
+    float a = 0.5, b = 1.0, c = 5.0, d = 10.0;
+    float denomination(i) = user.putInMachine();
+    float total = denomination++
+    int totalCoins = numberOfcoins
+     for ( i = 0; i < totalCoins; i++) { 
+        if(denomination.compareTo(a) == 1)
+            total = total + a;
+            else if(denomination.compareTo(b) == 1)
+                total = total + b;
+                else if(denomination.compareTo(c) == 1)
+                    total = total + c;
+                    else if(denomination.compareTo(d) == 1)
+                        total = total + d;
+                        else return false;
+}
+return total;
+
+Behaviour: purchase(confirmPurchase){
+    list<product> chosenProduct
+    float price = recognizeDenominations(total);
+    Boolean clickConfirmButton = true;
+    system.out.print("your pusrchase is confirmed");
+}
+
+Behaviour: giveOutChange(){
+    float change = recognizeDenominations(total) - Product(price);
+    system.out.print("your change is", change);
+}
+
+
+
+
+
+
+
+
+
+
+
