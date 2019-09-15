@@ -1,0 +1,81 @@
+Design a Course Registration Platform
+
+Student can
+1.look up course
+2.register a course
+3.drop a course
+4.view class schedule
+
+-----------------------------------------------------------------------------------------------------------
+Class: Student
+Data: Name, studentId, Grade, totalCredit, Course, college
+Behaviour: searchCourse(){
+    List<course> course = platformService.search();
+}
+
+Behaviour: registerCourse(){
+    int totalCredit = totalCredit(sumOfcourses);
+    int maxCredit = maxCredit;
+    if(course.numberOfStudent(presentStudent) < course.numberOfStudent(MaxStudent)){
+        if(totalCredit < sumOfCourses)
+            return true;
+            return "Your can not choose more course";
+    }
+    else return "The course has no spare seat";
+}
+
+Behaviour: dropCourse(){
+    system.out.print(platformService.registedCourse);
+    Student.clickDrop;
+    if(confirm) return true;
+    return false;
+}
+
+Behaviour: viewSchedule(){
+    system.out.print(platformService.registedCourse);
+}
+
+--------------------------------------------------------------------------------------------------------------
+Class: course
+Data: maxStudent, Name, ProfessorName, TAName, Schedule, credit, college, grade
+Behaviour: numberOfStudent(){
+    int MaxStudent(maxstudent);
+    int numberOfStudent = 0
+    if(student.confirmRegister) 
+        numberOfStudent++;
+        system.out.print(numberOfStudent);
+    else system.out.print(numberOfStudent);
+}
+
+------------------------------------------------------------------------------------------------------------
+Class: Platform
+Data: status
+Behaviour: search(){
+    List<course> course
+    int Grade(grade);
+    string College(college);
+    if(Grade.compareto(course(grade)) == 1, College.compareto(course(college)) == 1)
+    system.out.print(course(Data));
+    return false; 
+}
+
+Behaviour: registedCourse(){
+    List<registedCourse> registedCourse;
+    if(student.registerCourse() == true)
+        return true;
+        return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
