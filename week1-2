@@ -1,0 +1,110 @@
+Design a Car Rental System
+
+User can
+1.find a car in the system
+2.rent a car
+3.review the order
+4.cancel the order
+
+--------------------------------------------------------
+Class: uesr
+Data: Name, driveLisence, phoneNumber, creditCard
+Behaviour: searchCars(carsInfo){
+    List<cars> cars = SystemService.search(carsInfo);
+    //search the cars that users want   
+} 
+
+Behaviour: rentCar(){
+    carDetails = SystemService.rentcar(Make, Year, dailyPrice, Model);
+}   
+
+Behaviour: confirmOrder(){
+    rentDetails = SystemService.confirmOrder(checkInDate, checkOutDate, cretidCard, totalPrice);
+}
+
+Behaviour: cancelOrder(){
+    SystemService.cancalOrder(orderId);
+}
+---------------------------------------------------------
+Class: rentShop
+Data: Name, Address, ownerDetails, Lisence
+Behaviour: confirmOrder(){
+    if(systemService.checkPayment(orderId) == 1) 
+        return ture;
+    return false;    
+}
+----------------------------------------------------------
+Class: car
+Data: Make, Model, Year, dailyPrice, Vin
+Behaviour: checkAvailability(vin){
+    Date today = new Date;
+    if(today.compareTo(systemService.confirmOrder(checkInDate,checkOutdate)) != 1)
+        return true;
+     return false;
+}
+----------------------------------------------------------
+Class: creditCard
+Data: ownerName, expiryDate, cardNumber, cvvNumber, cardType
+Behaviour:makePayment(orderId, price){
+    int price = SystemService.rentcar(price)
+    if(user.canfirmOrder == 1) return true;
+    return false;
+}
+----------------------------------------------------------
+Class: systemService
+Data: Website
+Behviour: SystemService.search(carsInfo){
+    List<car> cars;
+    List<car> availableCars;
+
+    Make search.carsInfo.make;
+    Year search.carsInfo.year;
+    Model search.carsInfo.model;
+    
+    int i = 0;
+    for ( i = 0; i < numberOfcars; i++) {
+          if(search.carsInfo.compareTo(carsInfo(make, year, model)) == 1)
+              system.out.print<carsInfo>;
+              system.out.print<null>;
+    }
+}
+
+Behaviour: SystemService.rentcar(Make, Year, dailyPrice, Model){
+    Car car;
+    int numberOfDays;
+    int price = car.dailyPrice*numberOfDays;
+    creditCard.makePayment(orderId, price);
+}
+
+Behaviour: SystemService.confirmOrder(checkInDate, checkOutDate, cretidCard, totalPrice){
+    User.checkOrderInfo(checkInDate, checkOutDate, cretidCard, totalPrice);
+    User.clikeCheck();
+}
+
+Behaviour: cancalOrder(orderId){
+    orderData orderdata;
+    int orderdata = uesr.orderId;
+    User.checkOrderInfo(checkInDate, checkOutDate, cretidCard, totalPrice);
+    User.clikeCancel();
+    system.out.print("The order is canceled!");
+}
+
+Behaviour: checkPayment(orderId){
+    if(creditCard.makePayment(orderId, price) == 1)
+        return true;
+        return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
