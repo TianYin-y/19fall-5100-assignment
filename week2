@@ -1,0 +1,234 @@
+package Assignment2;
+
+public class Employee {
+    private int id;
+    private String firstName;
+    private int age;
+    private double salary;
+
+    Employee(int id, String firstName, int age, double salary) {
+        this.id = id;
+        this.firstName = firstName;
+        this.age = age;
+        this.salary = salary;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+}
+
+
+package Assignment2;
+
+/**
+ * Submit it on or before 22nd September 2019 , 12:00 pm
+ */
+public class Assignment2 {
+    /*
+        This method should return the sum of salaries of employees having salary greater than 5000
+        Note: Employee array is passed, not employee
+     */
+    public double salaryGreaterThanFiveThousand(Employee[] employees) {
+        // @TODO
+        double sum = 0;
+        List<Employee> list = new ArrayList<Employee>();
+        
+        for (int i = 0; i < list.size(); ++i) {
+            if(employee.salary > 5000){
+                sum = sum + employee.salary;
+            }    
+                else sum = sum;
+        }
+        system.out.println("the sum of salaries of employees having salary greater than 5000 = " + sum);
+        return 0.0;
+    }
+
+    
+    /*
+        This method should print either "Fizz", "Buzz" or "FizzBuzz"
+        "Fizz" - if id of employee is divisible by 3
+        "Buzz" - if id of employee is divisible by 5
+        "FizzBuzz" - if id of employee is divisible by both 3 and 5
+     */
+    public void fizzBuzz(Employee employee) {
+        // @TODO
+        int employee.id;
+        int divisibleby3 = employee.id / 3;
+        int divisibleby5 = employee.id / 5;
+        int divisibleby15 = employee.id / 15;
+        
+        if(divisibleby3 * 3 == employee.id){
+        system.out.println("Fizz");
+        }
+        else system.out.println("Error");
+        if(divisibleby5 * 5 == employee.id){
+        system.out.println("Buzz");
+        }
+        else system.out.println("Error");
+        if(divisibleby15 * 15 == employee.id){
+        system.out.println("FizzBuzz");
+        }
+        else system.out.println("Error");
+    }
+
+    
+    /*
+        This method should calculate tax for an employee in dollars
+        If salary of employee is less than or equal to 2500, tax should be 10%
+        If salary of employee is greater than 2500 but less than or equal to 5000, tax should be 25%
+        If salary of employee is greater than 5000, tax should be 35%
+    */
+    public double calculateTax(Employee employee) {
+        // @TODO
+        double tax = 0;
+        if(employee.salary < 2500){
+            tax = (double)0.010 * employee.salary;
+        }
+        else if(employee.salary <= 5000){
+            tax = (double)0.025 * employee.salary;
+        }
+        else if(employee.salary > 5000){
+            tax = (double)0.035 * employee.salary;
+        }
+        System.out.println("Your tax is" + tax);
+        return 0.0;
+    }
+    
+    
+    /*
+        We are given two employee objects.
+        Implement this method to swap salaries of employees
+    */
+    public void swap(Employee firstEmployee, Employee secondEmployee) {
+        // @TODO
+        double salaryEX1 = 0;
+        double salaryEX2 = 0;
+        salaryEX1 = firstEmployee.salary;
+        salaryEX2 = secondEmployee.salary;
+        secondEmployee.salary = salaryEX1;
+        firstEmployee.salary = salaryEX2;
+    }
+
+    
+    /*
+        Return number of employees whose age is greater than 50
+        Note: Employee array is passed, not employee
+     */
+    public int employeesAgeGreaterThan50(Employee[] employees) {
+        // @TODO
+        int number = 0;
+        List<Employee> list = new ArrayList<Employee>();
+        for (int i = 0; i < elist.size(); i++) {
+            if(employee.age > 50){
+            number = number + 1;
+            }
+            else number = number;
+            system.out.println("number of employees whose age is greater than 50" + number);
+        return 0;
+    }
+
+    
+    /*
+        Implement this method to reverse firstName of employee.
+        Ex. Before: employee.getFirstName() -> "John"
+        After : employee.getFirstName() -> "nhoJ"
+     */
+    public void reverseFirstName(Employee employee) {
+        // @TODO
+        Employee employee.getFirstName();
+        EmployeeString employee = new EmployeeString(employee.getFirstName);
+        system.out.println(EmployeeString.reverse());
+        
+    }
+
+    
+    /*
+        Print "true" if employee's first name contain one or more digits
+        Print "false" if employee's first name doesn't contain any digit
+        Ex: employee.getFirstName() -> "ha8l" == true
+        employee.getFirstName() -> "hail" == false
+     */
+    public void isContainDigit(Employee employee) {
+        // @TODO
+        String employee.getFirstName();
+        for(int i=0;i<employee.getFirstName.length();i++){
+            char ch=employee.getFirstName.charAt(i);
+            if(ch>='0'&&ch<='9'){
+                system.out.println("true");
+            }
+            else system.out.println("false");
+            }
+    }
+
+    
+     /*
+        Write a method to raise an employee's salary to three times of his/her original salary.
+        Eg: original salary was 1000/month. After using this method, the salary is 3000/month.
+        DO NOT change the input in this method.
+        Try to add a new method in Employee class: public void raiseSalary(double byPercent) 
+        Call this new method.
+     */
+    public void tripleSalary(Employee employee) {
+        // @TODO
+         if(employee.salary >= 0){
+        	  employee.salary = (double) 3 * employee.salary;
+            }
+          else return employee.salary;
+          system.out.println("Your raised salary is" + employee.salary);
+    }
+    
+    
+    //Additional question for extra credit
+    /*
+        Implement this method to convert String[] to employees array.
+        Ex: String[] employees = new String[]{"1,John,24,7500", "2,Hail,28,7899.90"};
+        This String array of length 2 contains 2 employees in form of string, where
+        id = 1
+        firstName=John
+        age=24
+        salary=7500
+        convert each string to employee object.
+        Hint: Use String methods. Refer : https://docs.oracle.com/javase/7/docs/api/java/lang/String.html
+     */
+    public Employee[] createEmployees(String[] employeesStr) {
+        Employee[] employees = new Employee[employeesStr.length];
+        // @TODO
+        List<Employee> list = new ArrayList<Employee>();
+        for(int i=0;i<employeesStr.length;i++){
+            system.out.println("id = " + employee(i).id));
+            system.out.println("firstName = " + employee(i).firstName));
+            system.out.println("age = " + employee(i).age));
+            system.out.println("salary = " + employee(i).salary));
+        }
+        return employees;
+    }
+}
