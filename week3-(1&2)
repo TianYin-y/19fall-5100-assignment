@@ -1,0 +1,54 @@
+import java.util.ArrayList;
+
+public class course {
+	public String courseName;
+	
+	public int courseId;
+	public void setCourseId(int courseId){
+		if(courseId <= 0) {
+		System.out.print("the courseId should not be negative or 0");
+		return;
+		}
+		this.courseId = courseId;
+	}
+	
+	public static int maxCapacity;
+	public void setmaxCapacity(int maxCapacity){
+		if(maxCapacity <= 10&&maxCapacity >= 100) {
+		System.out.print("the maxCapacity should not be less than 10 greater than 100");
+		return;
+		}
+	}
+	
+	public int professorId;
+	public void setProfessorId(int professorId){
+		if(professorId != 6) {
+		System.out.print("the professorId should be a six digit integer");
+		return;
+		}
+		this.professorId = professorId;
+	}
+	
+	public int credits;
+	public void setCredits(int credits) {
+		if(credits > 0&&credits < 10) {
+		System.out.print("the credits should be a single digit but greater than 0");
+		return;
+		}
+		this.credits = credits;
+	}
+	
+	public int numberOfStudent = 0;
+
+	ArrayList<Student> registeredStudent = new ArrayList<Student>();
+	
+	
+	public void Course(String courseName) {
+		this.courseName = courseName;
+	}
+	
+	public ArrayList<Student> getStudents() {
+		
+		return registeredStudent;
+	}
+}
