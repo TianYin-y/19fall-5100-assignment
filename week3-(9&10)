@@ -8,3 +8,4 @@ Q10. What is the difference between Encapsulation and Abstraction.
 Abstraction is about hiding unwanted details while giving out most essential details, 
 while Encapsulation means hiding the code and data into a single unit e.g. class 
 or method to protect inner working of an object from outside world
+
