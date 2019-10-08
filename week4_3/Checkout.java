@@ -2,7 +2,7 @@ package week4_3;
 
 import java.util.ArrayList;
 import java.util.List;
-import assignment5.Candy;
+import week4_3.Candy;
 
 public class Checkout extends java.lang.Object{
 	

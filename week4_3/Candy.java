@@ -17,12 +17,11 @@ public class Candy extends DessertItem{
 	
 	@Override
 	public int getCost() {
-		// TODO Auto-generated method stub
 		
 		double cents=0;
 		cents = weight * pricePerPount;
 		cost = (int) Math.round(cents);
-		//System.out.println("candy cost :" +cost);
+		System.out.println("candy cost :" +cost);
 		return cost;
 	}
 	
