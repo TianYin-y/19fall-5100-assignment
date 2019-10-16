@@ -1,0 +1,7 @@
+final(lowercase) is a reserved keyword in java. We can’t use it as an identifier as it is reserved. 
+We can use this keyword with variables, methods and also with classes. 
+The final keyword in java has different meaning depending upon it is applied to variable, class or method.
+
+Just as final is a reserved keyword, so in same way finally is also a reserved keyword in java i.e, we can’t use it as an identifier. 
+The finally keyword is used in association with a try/catch block and guarantees that a section of code will be executed, even if an exception is thrown. 
+The finally block will be executed after the try and catch blocks, but before control transfers back to its origin.
